@@ -5,4 +5,11 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname])
     devise_parameter_sanitizer.permit(:account_update, keys: [:nickname])
   end
+
+  def admin_required
+    if !current_user.is_admin?
+      flash[:warning] = "You are not admin"
+      redirect_to "/"
+    end
+  end
 end
