@@ -10,3 +10,8 @@ User.create!([email: "admin@example.com", password: "123456", password_confirmat
 
 puts "Create default user account"
 User.create!([email: "shyw13@gmail.com", password: "123456", password_confirmation: "123456", nickname: "Richard", is_admin: false])
+
+puts "Create default products"
+Product.create!([title: "Mac Pro", description: "8G 256G SSD", price: 12500, quantity: 10])
+Product.create!([title: "IPhone 6+", description: "pink 4G 128G", price: 7500, quantity: 100])
+Product.create!([title: "IPAD mini", description: "8G", price: 4500, quantity: 50])
