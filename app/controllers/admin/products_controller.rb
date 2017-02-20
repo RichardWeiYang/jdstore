@@ -24,10 +24,10 @@ class Admin::ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.update(product_param)
-      flash[:notice] = "Product information updated"
+      flash[:notice] = "Product \'#{@product.title}\' information updated"
       redirect_to admin_products_path
     else
-      flash[:warning] = "can't update product information"
+      flash[:warning] = "can't update product \'#{@product.title}\' information"
       render :edit
     end
   end
@@ -36,7 +36,7 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new(product_param)
 
     if @product.save
-      flash[:notice] = "Product information created"
+      flash[:notice] = "Product \'#{@product.title}\' created"
       redirect_to admin_products_path
     else
       flash[:warning] = "can't create a new product"
@@ -47,7 +47,7 @@ class Admin::ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    flash[:warning] = "product deleted"
+    flash[:warning] = "product \'#{@product.title}\' deleted"
     redirect_to admin_products_path
   end
 
