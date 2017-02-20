@@ -12,6 +12,7 @@
           <th colspan="2">Product Info</th>
           <th>Price</th>
           <th>Quantity</th>
+          <th>Option</th>
         </tr>
       </thead>
       <tbody>
@@ -35,6 +36,11 @@
             </td>
             <td>
               <%= cart_item.quantity %>
+            </td>
+            <td>
+              <%= link_to cart_item_path(cart_item.product_id), method: :delete, data: { confirm: "You will delete #{cart_item.product.title}" } do %>
+                <i class="fa fa-trash">delete</i>
+              <% end %>
             </td>
           </tr>
         <% end %>
