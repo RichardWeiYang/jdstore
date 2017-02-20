@@ -64,7 +64,11 @@
     <hr>
 
     <div class="checkout clearfix">
-      <%= link_to("Checkout", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
+      <% if current_cart.products.count == 0 %>
+        <i class="btn btn-lg btn-danger pull-right">Empty Cart</i>
+      <% else %>
+        <%= link_to("Checkout", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
+      <% end %>
     </div>
   </div>
 </div>
