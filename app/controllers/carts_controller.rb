@@ -7,6 +7,6 @@ class CartsController < ApplicationController
 
   def checkout
     flash[:notice] = "checkout"
-    redirect_to carts_path
+    @order = Order.new
   end
 end
