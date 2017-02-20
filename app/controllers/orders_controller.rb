@@ -24,8 +24,13 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.find_by_token(params[:id])
-    @product_lists = @order.product_lists
+    @order = current_user.orders.find_by_token(params[:id])
+    if @order.blank?
+      flash[:warning] = "No such order"
+      redirect_to root_path
+    else
+      @product_lists = @order.product_lists
+    end
   end
 
   private
