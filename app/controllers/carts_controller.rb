@@ -4,4 +4,9 @@ class CartsController < ApplicationController
     flash[:warning] = "product deleted"
     redirect_to carts_path
   end
+
+  def checkout
+    flash[:notice] = "checkout"
+    redirect_to carts_path
+  end
 end
