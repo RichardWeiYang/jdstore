@@ -13,6 +13,9 @@
                 Your Cart <i class="fa fa-shopping-cart"></i> (<%= current_cart.products.count %>)
                 <% end %>
               </li>
+              <li>
+                <%= link_to("History Orders", account_orders_path) %>
+              </li>
               <% if !current_user %>
                 <li><%= link_to("注册", new_user_registration_path) %></li>
                 <li><%= link_to("登入", new_user_session_path) %></li>
