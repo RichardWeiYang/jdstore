@@ -4,6 +4,14 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/">Shopping Mall</a>
         </div>
+        <% if current_user && current_user.is_admin%>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">Products</a>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/admin/orders">Orders</a>
+        </div>
+        <% end %>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
