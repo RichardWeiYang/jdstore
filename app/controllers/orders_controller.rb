@@ -52,11 +52,12 @@ class OrdersController < ApplicationController
 
   def apply_to_cancel
     @order = Order.find(params[:id])
+    @order.cancel_order!
     OrderMailer.apply_cancel(@order).deliver!
     flash[:notice] = "Cancel Request Sent"
     redirect_to :back
   end
-  
+
   private
 
   def order_params
