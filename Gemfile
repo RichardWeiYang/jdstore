@@ -36,6 +36,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'aasm'
 
+# run bundle update after bundle install
 gem 'carrierwave-qiniu'
 gem 'qiniu-rs'
 
