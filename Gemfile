@@ -35,6 +35,7 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'aasm'
+gem 'font-awesome-rails'
 
 # run bundle update after bundle install
 gem 'carrierwave-qiniu'
