@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
   def clean
-    current_cart.destroy
+    current_cart.clean!
     flash[:warning] = "product deleted"
     redirect_to carts_path
   end
