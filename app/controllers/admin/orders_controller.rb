@@ -7,6 +7,10 @@ class Admin::OrdersController < ApplicationController
   def index
     @orders = Order.order("id DESC")
 
+    if params[:ids].present?
+      @orders = @orders.where( :id => params[:ids] )
+    end
+
     if params[:status] == "pending"
       @orders = @orders.where( :aasm_state => ["order_placed", "paid"] )
     elsif params[:status] == "done"
