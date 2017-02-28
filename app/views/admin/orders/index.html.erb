@@ -5,6 +5,12 @@
   <%= submit_tag "Submit" %>
 <% end %>
 
+<p>
+  <%= link_to "all", admin_orders_path %>
+  <%= link_to "pending", admin_orders_path( :status => "pending") %>
+  <%= link_to "done", admin_orders_path( :status => "done") %>
+</p>
+
 <table class="table table-bordered">
   <thead>
     <tr>
