@@ -8,7 +8,7 @@ class Admin::OrdersController < ApplicationController
     @orders = Order.order("id DESC")
 
     if params[:ids].present?
-      @orders = @orders.where( :id => params[:ids] )
+      @orders = @orders.where( :id => params[:ids].split(",") )
     end
 
     if params[:status] == "pending"
