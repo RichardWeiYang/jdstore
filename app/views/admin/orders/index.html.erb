@@ -2,6 +2,11 @@
 
 <%= form_tag admin_orders_path, :method => :get do %>
 
+  <%= label_tag :total %>
+  <%= text_field_tag :total %>
+  ...
+  <%= text_field_tag :total_up %>
+
   <%= label_tag :ids %>
   <%= text_field_tag :ids %>
 

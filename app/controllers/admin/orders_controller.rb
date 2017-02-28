@@ -7,6 +7,14 @@ class Admin::OrdersController < ApplicationController
   def index
     @orders = Order.order("id DESC")
 
+    if params[:total].present?
+      @orders = @orders.where( "total > ?", params[:total] )
+    end
+
+    if params[:total_up].present?
+      @orders = @orders.where( "total <= ?", params[:total_up] )
+    end
+
     if params[:ids].present?
       @orders = @orders.where( :id => params[:ids].split(",") )
     end
