@@ -36,6 +36,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'aasm'
 gem 'font-awesome-rails'
+gem 'will_paginate'
 
 # run bundle update after bundle install
 gem 'carrierwave-qiniu'

@@ -1,5 +1,10 @@
 <h2> Order List </h2>
 
+<%= form_tag admin_orders_path, :method => :get do %>
+  <%= date_field_tag :date %>
+  <%= submit_tag "Submit" %>
+<% end %>
+
 <table class="table table-bordered">
   <thead>
     <tr>
