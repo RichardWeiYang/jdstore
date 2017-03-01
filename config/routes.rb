@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'welcome#index'
 
-  namespace :admin do
+  scope :module => "admin", :as => "admin", :path => "admin" do
+  #namespace :admin do
     resources :products
     resources :orders do
       member do
