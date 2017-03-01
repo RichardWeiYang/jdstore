@@ -40,4 +40,14 @@ Rails.application.routes.draw do
   namespace :account do
     resources :orders
   end
+
+  resources :todos do
+    collection do
+      get :stats
+    end
+
+    member do
+      post :done
+    end
+  end
 end

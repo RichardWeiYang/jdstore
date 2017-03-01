@@ -12,6 +12,8 @@
     <div class="container-fluid">
       <%= render "common/navbar" %>
       <%= render "common/flashes" %>
+      <p><%= todos_path %></p>
+      <p><%= done_todo_path("abc") %></p>
       <%= yield %>
     </div>
     <%= render "common/footer" %>
