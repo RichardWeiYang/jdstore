@@ -41,6 +41,9 @@ Rails.application.routes.draw do
     resources :orders
   end
 
+  # zoo_path will point to /foobar
+  get "/foobar" => "welcome#index", :as => "zoo"
+
   resources :todos do
     collection do
       get :stats
