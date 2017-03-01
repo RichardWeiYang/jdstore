@@ -43,6 +43,8 @@ Rails.application.routes.draw do
 
   # zoo_path will point to /foobar
   get "/foobar" => "welcome#index", :as => "zoo"
+  # ball_path will point to /foobar
+  get "/basket/:a/:b/:c" => "welcome#index", :as => "ball"
 
   resources :todos do
     collection do
