@@ -1,8 +1,5 @@
-class Admin::ProductsController < ApplicationController
-  layout "admin"
+class Admin::ProductsController < AdminController
 
-  before_action :authenticate_user!
-  before_action :admin_required
   before_action :find_product, only: [:show, :edit, :update, :destroy]
 
   def index
