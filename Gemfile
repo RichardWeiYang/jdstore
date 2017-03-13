@@ -38,6 +38,7 @@ gem 'aasm'
 gem 'font-awesome-rails'
 gem 'will_paginate'
 gem 'awesome_rails_console'
+gem 'rucaptcha'
 
 # run bundle update after bundle install
 gem 'carrierwave-qiniu'
