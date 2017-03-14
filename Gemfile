@@ -40,6 +40,7 @@ gem 'will_paginate'
 gem 'awesome_rails_console'
 gem 'rucaptcha'
 gem 'dalli'
+gem 'acts_as_list'
 
 # run bundle update after bundle install
 gem 'carrierwave-qiniu'
