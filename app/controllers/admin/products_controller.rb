@@ -14,6 +14,7 @@ class Admin::ProductsController < AdminController
   end
 
   def edit
+    binding.pry
   end
 
   def update

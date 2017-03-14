@@ -251,6 +251,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   mini_magick
   pg
+  pry
   puma (~> 3.0)
   qiniu-rs
   rails (~> 5.0.0)

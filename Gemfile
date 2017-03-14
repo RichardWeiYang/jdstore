@@ -41,6 +41,7 @@ gem 'awesome_rails_console'
 gem 'rucaptcha'
 gem 'dalli'
 gem 'acts_as_list'
+gem 'pry'
 
 # run bundle update after bundle install
 gem 'carrierwave-qiniu'
