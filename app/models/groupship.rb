@@ -1,0 +1,2 @@
+class Groupship < ApplicationRecord
+end
