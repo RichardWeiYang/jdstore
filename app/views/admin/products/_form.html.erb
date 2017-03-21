@@ -2,6 +2,7 @@
 
 <%= f.input :title %>
 <%= f.input :description %>
+<%= f.association :groups, :as => :check_boxes %>
 <%= f.input :publish_on, :as => :string %>
 <%= f.association :category %>
 <%#= f.select :category_id, Category.all.map{ |x| [x.name, x.id] }, :class => "form-control" %>
