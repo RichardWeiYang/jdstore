@@ -2,7 +2,7 @@
 
 <%= f.input :title %>
 <%= f.input :description %>
-<%= f.association :groups, :as => :check_boxes %>
+<%= f.association :groups %>
 <%= f.input :publish_on, :as => :string %>
 <%= f.association :category %>
 <%#= f.select :category_id, Category.all.map{ |x| [x.name, x.id] }, :class => "form-control" %>
@@ -18,6 +18,7 @@
 
 <script>
   $("#product_category_id").select2();
+  $("#product_group_ids").select2();
 
   $("#product_publish_on").datepicker( { format: "yyyy/mm/dd" } );
 </script>
