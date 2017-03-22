@@ -19,3 +19,8 @@
 //= require bootstrap-datepicker
 //= require autosize.min
 //= require_tree .
+
+$(document).on("turbolinks:load", function(){
+  //alert("test");
+  console.log("test");
+})
