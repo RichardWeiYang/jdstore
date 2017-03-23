@@ -16,6 +16,7 @@
 <%= f.submit "Submit"%>
 <% end %>
 
+<%= content_for :js do %>
 <script>
   autosize($("#product_description"))
   $("#product_category_id").select2();
@@ -23,3 +24,4 @@
 
   $("#product_publish_on").datepicker( { format: "yyyy/mm/dd" } );
 </script>
+<% end %>
