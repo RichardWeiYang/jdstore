@@ -43,6 +43,7 @@ gem 'dalli'
 gem 'acts_as_list'
 gem 'select2-rails'
 gem 'bootstrap-datepicker-rails'
+gem 'rest-client'
 
 # run bundle update after bundle install
 gem 'carrierwave-qiniu'
